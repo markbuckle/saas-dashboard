@@ -6,7 +6,7 @@ config({ path: ".env.local" });
 export default defineConfig({
   schema: "./db/schema.ts",
   dialect: "postgresql",
-  out: "./migrations",
+  // out: "./migrations",
   migrations: {
     prefix: "supabase",
   },
