@@ -1,24 +1,290 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SaaS Dashboard
 
-## Getting Started
+## Build initial framework with Vite & React
 
-First, run the development server:
+Using the [Vite JS guide](https://vitejs.dev/guide/), create a Vite project by running the following in your terminal:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```pwsh
+npm create vite@4.3.1 saas-widget -- --template react
+```
+Choose react and javascript options
+
+Go to the project folder that was created:
+```pwsh
+cd react
+```
+and then run:
+```pwsh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the application, run:
+```pwsh
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Create an Embeddable widget
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Install and integrate Tailwind
+
+Using the [ShadnCn/Ui](https://ui.shadcn.com/docs/installation/vite) guide run:
+```pwsh
+npm install -D tailwindcss postcss autoprefixer
+```
+Initialize tailwind using:
+```pwsh
+npx tailwindcss init -p
+```
+Create a new file called jsconfig.json and copy and paste the tsconfig.json file from [ShadnCn/Ui Step 3](https://ui.shadcn.com/docs/installation/vite) 
+
+Copy and paste the bottom 3 lines of code in step 5 into your vite.config.js file.
+
+Run the shadcn-ui init command to setup your project:
+```pwsh
+npx shadcn-ui@latest init
+```
+To configure components.json, choose the following:
+```pwsh
+Would you like to use TypeScript (recommended)? **no** / yes
+Which style would you like to use? › Default
+Which color would you like to use as base color? › Slate
+Where is your global CSS file? › › src/index.css
+Do you want to use CSS variables for colors? › no / **yes**
+Where is your tailwind.config.js located? › tailwind.config.js
+Configure the import alias for components: › @/components
+Configure the import alias for utils: › @/lib/utils
+Are you using React Server Components? › no / **yes** (no)
+```
+You can now start adding components to your project:
+```pwsh
+npx shadcn-ui@latest add button
+```
+Add a text area for the feedback message:
+You can now start adding components to your project:
+```pwsh
+npx shadcn-ui@latest add textarea
+```
+The new button will go in the /src/components/ui folder. Add / import your Button into the App.jsx file.
+
+Add a [label](https://ui.shadcn.com/docs/components/label) by running:
+```pwsh
+npx shadcn-ui@latest add label input
+```
+
+### Icons using Lucide
+
+The [Lucide](https://lucide.dev/) library works with React and Tailwind, but we're going to keep it as light as possible in this project so we'll just use the svg's.
+
+### Add a popover component
+
+From [ShadCN](https://ui.shadcn.com/docs/components/popover) run:
+```pwsh
+npx shadcn-ui@latest add popover
+```
+### Add a Web component
+
+In the /src folder create an index.jsx file.
+
+Run:
+```pwsh
+npm run build
+```
+
+## Authentication with NextJS
+
+### Install
+Go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
+In the command prompt run:
+```pwsh
+npx create-next-app@latest
+```
+<img width=600px src="">
+
+Open up the new saas-dashbaord folder in VS code 
+Run:
+```pwsh
+npm run dev
+```
+Initialize [shadcn](https://ui.shadcn.com/docs/installation/next) and choose all the default options:
+```pwsh
+npx shadcn-ui@latest init
+```
+Add a button:
+```pwsh
+npx shadcn-ui@latest add button
+```
+Use the [clerk guide](https://clerk.com/docs/quickstarts/nextjs) for the next few steps:
+Next install Clerk NextJS:
+```pwsh
+npm install @clerk/nextjs
+```
+Add Middleware to your app (Step 3)
+
+Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
+
+Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_au*MTE3OTk4MTE0MC4xNzIzMTIwMjA5*_ga*MTIyMjUwNjA4Ny4xNzIzMTIwMjA5*_ga_1WMF5X234K*MTcyMzEyNTc1NS4yLjEuMTcyMzEyNTc1Ni4wLjAuMA..) to get your .env.local values.
+
+Add ClerkProvider to your app
+
+**MAKE SURE to change your DTABASE_URL port to 5432. There has been a lot of [issues reported](https://github.com/drizzle-team/drizzle-orm/issues/2338) online recently about port 6543. **
+
+Add a [Dialog component](https://ui.shadcn.com/docs/components/dialog) using these steps.
+
+Install [Lucide React](https://lucide.dev/guide/installation)
+```pwsh
+npm install lucide-react
+```
+
+## Database Setup with Supabase, Drizzle and PostgresSQL
+
+Install [Supabase dependencies](https://orm.drizzle.team/docs/get-started-postgresql#supabase):
+```pwsh
+npm i drizzle-orm postgres
+```
+If the React versions conflict try running:
+```pwsh
+npm i react@latest react-dom@latest
+```
+And then run this again:
+```pwsh
+npm i drizzle-orm postgres
+```
+Install Drizzle dependencies:
+```pwsh
+npm i -D drizzle-kit
+```
+Create a new folder in your root directory called /db and then a new file called schema.ts.
+
+Create your models. Copy and paste the code from [Step 2](https://orm.drizzle.team/docs/get-started-postgresql#supabase). Make appropriate edits to the code for your specific database.
+
+Make your first Query. Copy and paste the code from step 3. Again make appropriate edits based on your speicific database.
+
+Connection pooling (optional). Copy and paste the code from step 4. Again make appropriate edits based on your speicific database. 
+
+install the drizzle kit: 
+```pwsh
+npm i -D drizzle-kit
+```
+
+Create a drizzle.config.ts file.
+
+Add the following files to your packgae.json scripts:
+```json
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+```
+
+Create a new [supabase project](https://supabase.com/dashboard/projects)
+
+Run the migration:
+```pwsh
+npm run db:migrate
+```
+Update page.tsx and schema.ts with User credentials
+
+Run the push:
+```pwsh
+npm run db:push
+```
+
+If you receive a connection error it's likely because it is not reading the correct dbCredentials.
+
+Run:
+```pwsh
+npm install dotenv
+```
+
+## Projects Page
+Add skeleton:
+```pwsh
+npx shadcn-ui@latest add skeleton
+```
+
+## Feedback Table
+```pwsh
+
+Once code is updated, push changes with:
+```pwsh
+npm run db:push
+```
+
+Use [TanStack Tables ](https://tanstack.com/table/latest/docs/framework/react/examples/basic) to build a nice table.
+
+Install with:
+```pwsh
+npm install @tanstack/react-table
+```
+Use the [Pagination example](https://tanstack.com/table/latest/docs/framework/react/examples/pagination) as a template and edit the code according to how you want the table displayed on your SaaS.
+
+Create the [Shadcn dropdown button](https://ui.shadcn.com/docs/components/dropdown-menu):
+```pwsh
+npx shadcn-ui@latest add dropdown-menu
+```
+Create a new file in the components folder named header-menu.tsx
+
+In your Supabase dashboard go to the SQL Editor and create a new Query. Use the [Supabase functions docs](https://supabase.com/docs/guides/database/functions) as a guide. Adjust your code according to your table / specific parameters. it may look something like this:
+
+```supa
+create or replace function add_feedback(p_project_id integer, p_user_name text, p_user_email text, p_message text)
+returns bigint
+language plpgsql
+as $$
+declare
+  new_feedback_id bigint;
+begin
+  insert into feedbacks(project_id, user_name, user_email, message) 
+  values (p_project_id, p_user_name, p_user_email, p_message)
+  returning id into new_feedback_id;
+
+  return new_feedback_id ;
+  end;
+$$;
+```
+
+Open a new query and test the function using:
+```supa
+select add_feedback(4, 'user', 'test@gmail.com', 'testing db function supabase');
+```
+
+Install the [Supabase Javascript Client Library ](https://supabase.com/docs/reference/javascript/installing) in the root folder (/saas-widget):
+```pwsh
+npm install @supabase/supabase-js
+```
+
+Create a new file in the /src folder called supabaseClient.js
+
+## Payments
+
+Create a Stripe account then go to the [Developers console](https://dashboard.stripe.com/test/developers). Go to the API keys section and include the keys in your .env.local file with the designated names below. Copy and paste the value for each key provided in your account:
+```.env
+NEXT_PUBLIC_PUBLISHABLE_KEY=xxxxxxxxxxxxxxx
+STRIPE_SECRET_KEY=xxxxxxxxxxxxxxxxxxx
+```
+Next go to the Product Catalog and create prices for your app.
+
+Once created, go to your lib folder and create a file called payments.ts
+
+Next install stripe:
+```pwsh
+npm install stripe @stripe/stripe-js
+```
+
+Create stripe.ts and stripe-client.ts files (see code)
+
+Create a Stripe checkout session using the [Stripe docs](https://docs.stripe.com/api/checkout/sessions/create?lang=node) for guidance
+
+### [Webhooks](https://docs.stripe.com/webhooks)
+When building Stripe integrations, you might want your applications to receive events as they occur in your Stripe accounts, so that your backend systems can execute actions accordingly.
+
+Once you update your Webhook route.ts code, go to your Stripe dashboard and go to the Webhooks section. Click Add an Endpoint. Make a url something like:
+
+https://saas-widget.vercel.app/api/stripe/webhook
+
+and add the relevant events that are in your route.ts file.
+
+## Landing Page
 
 ## Learn More
 
