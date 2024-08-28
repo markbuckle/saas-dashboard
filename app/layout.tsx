@@ -19,10 +19,15 @@ export default function RootLayout({
     // provider will pass the data onto other clerk components like sign out, sign in and user button
     <ClerkProvider>
       <html lang="en">
+        <Head>
+          <title>My App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <body>
-          <Script src="https://saas-widget.vercel.app//widget.umd.js"></Script>
+          <Script src="https://saas-widget.vercel.app/widget.umd.js"></Script>
           <PageHeader />
-          <my-widget>{children}</my-widget>
+          <my-widget></my-widget>
+          {children}
         </body>
       </html>
     </ClerkProvider>
