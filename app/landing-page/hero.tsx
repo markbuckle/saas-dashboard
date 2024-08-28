@@ -26,7 +26,7 @@ const Hero = () => {
                     Get Started
                   </Button>
                   <Button className="bg-blue-300" variant="secondary" asChild>
-                    <Link href="https://github.com">
+                    <Link href="https://github.com/markbuckle/saas-dashboard">
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </Link>
