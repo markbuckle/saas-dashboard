@@ -1,5 +1,6 @@
 # SaaS Dashboard
 
+
 ## Build initial framework with Vite & React
 
 Using the [Vite JS guide](https://vitejs.dev/guide/), create a Vite project by running the following in your terminal:
