@@ -22,8 +22,7 @@ export default function RootLayout({
         <body>
           <Script src="https://saas-widget.vercel.app//widget.umd.js"></Script>
           <PageHeader />
-          <my-widget></my-widget>
-          {children}
+          <my-widget>{children}</my-widget>
         </body>
       </html>
     </ClerkProvider>
