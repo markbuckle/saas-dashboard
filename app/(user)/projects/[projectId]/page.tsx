@@ -43,7 +43,7 @@ const page = async ({
         <div className="flex flex-col">
           {project.url ? (
             <Link
-              href={"https://saas-dashboard.vercel.app"}
+              href={"https://saasdashboard.vercel.app"}
               className="underline text-indigo-700 flex items-center"
             >
               <Globe className="h-5 w-5 mr-2" />
