@@ -48,7 +48,7 @@ const PricingCard = ({
       <div>
         <button
           onClick={onClick}
-          className="bg-gray-900 py-2 mt-3 rounded-lg text-white w-full"
+          className="bg-gray-900 py-2 mt-3 rounded-lg text-white w-full hover:bg-blue-300 hover:text-black"
         >
           Select Plan
         </button>

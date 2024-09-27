@@ -21,11 +21,11 @@ const Hero = () => {
             <SignedOut>
               <SignUpButton>
                 <div className="flex gap-3">
-                  <Button>
+                  <Button className="hover:bg-gray-300 hover:text-black">
                     <LogIn className="w-4 h-4 mr-2" />
                     Get Started
                   </Button>
-                  <Button className="bg-blue-300" variant="secondary" asChild>
+                  <Button className="bg-blue-400 hover:bg-gray-300 hover:text-black" asChild>
                     <Link href="https://github.com/markbuckle?tab=repositories&q=saas&type=&language=&sort=">
                       <Github className="w-4 h-4 mr-2" />
                       Source Code
