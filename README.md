@@ -2,16 +2,16 @@
 
 This web app allows users to collect feedback from their websites and the feedback collection widget is easy to embed. It includes an admin dashboard and a subscription model.
 
-<ol>Components:</ol>
+<h3>Components:</h3>
 <li>Web Component / embeddable widgets</li>
-- Authentication with Clerk
-- Database Functions, Queries, Mutations and Hosting
-- Creating and Generating Types with TypeScript - to ensure a type-safe application
-- Injecting embeddable into other apps
-- NextJS Navigation & Layouts
-- Mobile Responsiveness
-- Creating Tables, Pagination, Filtering
-- Integrating Payment System
+<li>Authentication with Clerk</li>
+<li>Database Functions, Queries, Mutations and Hosting</li>
+<li>Creating and Generating Types with TypeScript - to ensure a type-safe application</li>
+<li>Injecting embeddable into other apps</li>
+<li>NextJS Navigation & Layouts</li>
+<li>Mobile Responsiveness</li>
+<li>Creating Tables, Pagination, Filtering</li>
+<li>Integrating Payment System</li>
 
 <h3>Authentication with NextJS</h3>
 
