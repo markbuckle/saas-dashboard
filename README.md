@@ -46,9 +46,7 @@ npm install @clerk/nextjs
 
 Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
 
-Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_au*MTE3OTk4MTE0MC4xNzIzMTIwMjA5*_ga*MTIyMjUwNjA4Ny4xNzIzMTIwMjA5*_ga_1WMF5X234K*MTcyMzEyNTc1NS4yLjEuMTcyMzEyNTc1Ni4wLjAuMA..) to get your .env.local values.
-
-Add ClerkProvider to your app
+Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_au*MTE3OTk4MTE0MC4xNzIzMTIwMjA5*_ga*MTIyMjUwNjA4Ny4xNzIzMTIwMjA5*_ga_1WMF5X234K*MTcyMzEyNTc1NS4yLjEuMTcyMzEyNTc1Ni4wLjAuMA..) to get your .env.local values. Add ClerkProvider to your app.
 
 **MAKE SURE to change your DATABASE_URL port to 5432. There has been a lot of [issues reported](https://github.com/drizzle-team/drizzle-orm/issues/2338) online recently about port 6543. **
 
