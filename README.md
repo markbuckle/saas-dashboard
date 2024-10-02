@@ -3,9 +3,9 @@
 This web app allows users to collect feedback from their websites and the feedback collection widget is easy to embed. It's high level features include an admin dashboard and a subscription model.
 
 <h3>Components:</h3>
-<li>Web Component / embeddable widgets</li>
+<li>Web Component / embeddable widget</li>
 <li>Authentication with NextJs/Clerk</li>
-<li>Database Functions, Queries, Mutations and Hosting</li>
+<li>Database</li>
 <li>Creating and Generating Types with TypeScript - to ensure a type-safe application</li>
 <li>Injecting embeddable into other apps</li>
 <li>NextJS Navigation & Layouts</li>
@@ -42,7 +42,7 @@ Next install Clerk NextJS:
 ```pwsh
 npm install @clerk/nextjs
 ```
-Add Middleware to your app (Step 3)
+<h4>Add Middleware to your app</h4>
 
 Create an .env.local file and include the files include the keys shown the https://clerk.com/docs/quickstarts/nextjs documentation
 
@@ -50,7 +50,7 @@ Create a [Clerk account](https://dashboard.clerk.com/sign-up?_gl=1*u7kgs3*_gcl_a
 
 Add ClerkProvider to your app
 
-**MAKE SURE to change your DTABASE_URL port to 5432. There has been a lot of [issues reported](https://github.com/drizzle-team/drizzle-orm/issues/2338) online recently about port 6543. **
+**MAKE SURE to change your DATABASE_URL port to 5432. There has been a lot of [issues reported](https://github.com/drizzle-team/drizzle-orm/issues/2338) online recently about port 6543. **
 
 Add a [Dialog component](https://ui.shadcn.com/docs/components/dialog) using these steps.
 
@@ -59,7 +59,7 @@ Install [Lucide React](https://lucide.dev/guide/installation)
 npm install lucide-react
 ```
 
-## Database Setup with Supabase, Drizzle and PostgresSQL
+<h3>Database Setup with Supabase, Drizzle and PostgresSQL</h3>
 
 Install [Supabase dependencies](https://orm.drizzle.team/docs/get-started-postgresql#supabase):
 ```pwsh
