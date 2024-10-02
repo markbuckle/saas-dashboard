@@ -1,10 +1,10 @@
 <h1>SaaS-Dashboard</h1>
 
-This web app allows users to collect feedback from their websites and the feedback collection widget is easy to embed. It includes an admin dashboard and a subscription model.
+This web app allows users to collect feedback from their websites and the feedback collection widget is easy to embed. It's high level features include an admin dashboard and a subscription model.
 
 <h3>Components:</h3>
 <li>Web Component / embeddable widgets</li>
-<li>Authentication with Clerk</li>
+<li>Authentication with NextJs/Clerk</li>
 <li>Database Functions, Queries, Mutations and Hosting</li>
 <li>Creating and Generating Types with TypeScript - to ensure a type-safe application</li>
 <li>Injecting embeddable into other apps</li>
@@ -13,10 +13,9 @@ This web app allows users to collect feedback from their websites and the feedba
 <li>Creating Tables, Pagination, Filtering</li>
 <li>Integrating Payment System</li>
 
-<h3>Authentication with NextJS</h3>
+<h3>Authentication</h3>
 
-<h4>Install</h4>
-Go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
+To install nextJS, go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
 In the command prompt run:
 ```pwsh
 npx create-next-app@latest
