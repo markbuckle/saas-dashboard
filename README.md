@@ -13,6 +13,10 @@ This web app allows users to collect feedback from their websites and the feedba
 <li>Creating Tables, Pagination, Filtering</li>
 <li>Integrating Payment System</li>
 
+<h3>Web Component / embeddable widgets</h3>
+
+See for details.
+
 <h3>Authentication</h3>
 
 To install nextJS, go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
@@ -20,10 +24,8 @@ In the command prompt run:
 ```pwsh
 npx create-next-app@latest
 ```
-<img width=600px src="">
 
-Open up the new saas-dashbaord folder in VS code 
-Run:
+Open up the new saas-dashboard folder in VS code and run:
 ```pwsh
 npm run dev
 ```
