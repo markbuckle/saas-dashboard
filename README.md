@@ -1,8 +1,8 @@
 # SaaS Dashboard
 
-<h2>Authentication with NextJS</h2>
+<h3>Authentication with NextJS</h3>
 
-### Install
+<h4>Install</h4>
 Go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
 In the command prompt run:
 ```pwsh
