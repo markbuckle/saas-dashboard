@@ -1,6 +1,6 @@
 # SaaS Dashboard
 
-## Authentication with NextJS
+<h2>Authentication with NextJS</h2>
 
 ### Install
 Go to the [nextjs docs](https://nextjs.org/docs/getting-started/installation)
