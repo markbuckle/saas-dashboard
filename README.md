@@ -6,12 +6,13 @@ This web app allows users to collect feedback from their websites and the feedba
 <li>Web Component / embeddable widget</li>
 <li>Authentication with NextJs/Clerk</li>
 <li>Database</li>
-<li>Creating and Generating Types with TypeScript - to ensure a type-safe application</li>
+<li>Creating and Generating Types with TypeScript</li>
 <li>Injecting embeddable into other apps</li>
 <li>NextJS Navigation & Layouts</li>
 <li>Mobile Responsiveness</li>
 <li>Creating Tables, Pagination, Filtering</li>
 <li>Integrating Payment System</li>
+<li>Deployment</li>
 
 <h3>Web Component / embeddable widgets</h3>
 
@@ -118,14 +119,16 @@ Run:
 npm install dotenv
 ```
 
-## Projects Page
+<h3>Projects Page </h3>
+
+Using typescript will ensure a type-safe application
+
 Add skeleton:
 ```pwsh
 npx shadcn-ui@latest add skeleton
 ```
 
-## Feedback Table
-```pwsh
+<h3>Feedback Table</h3>
 
 Once code is updated, push changes with:
 ```pwsh
@@ -177,7 +180,7 @@ npm install @supabase/supabase-js
 
 Create a new file in the /src folder called supabaseClient.js
 
-## Payments
+<h3>Payments </h3>
 
 Create a Stripe account then go to the [Developers console](https://dashboard.stripe.com/test/developers). Go to the API keys section and include the keys in your .env.local file with the designated names below. Copy and paste the value for each key provided in your account:
 ```.env
@@ -197,7 +200,7 @@ Create stripe.ts and stripe-client.ts files (see code)
 
 Create a Stripe checkout session using the [Stripe docs](https://docs.stripe.com/api/checkout/sessions/create?lang=node) for guidance
 
-### [Webhooks](https://docs.stripe.com/webhooks)
+<h4>[Webhooks](https://docs.stripe.com/webhooks)</h4>
 When building Stripe integrations, you might want your applications to receive events as they occur in your Stripe accounts, so that your backend systems can execute actions accordingly.
 
 Once you update your Webhook route.ts code, go to your Stripe dashboard and go to the Webhooks section. Click Add an Endpoint. Make a url something like:
@@ -206,18 +209,11 @@ https://saas-widget.vercel.app/api/stripe/webhook
 
 and add the relevant events that are in your route.ts file.
 
-## Landing Page
+<h3>Landing Page</h3>
 
-## Learn More
+Details to come soon.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+<h3>Deploy on Vercel</h3>
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
