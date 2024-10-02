@@ -15,7 +15,7 @@ This web app allows users to collect feedback from their websites and the feedba
 
 <h3>Web Component / embeddable widgets</h3>
 
-See for details.
+See my [saas-widget](https://github.com/markbuckle/saas-widget) repo for details.
 
 <h3>Authentication</h3>
 
